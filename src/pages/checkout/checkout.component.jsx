@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import CheckoutItem from "../../components/chekcout-item/checkout-item.component";
+import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 
 import {
   selectCartItems,
@@ -29,7 +29,11 @@ export const CheckoutPage = ({ cartItems, total }) => {
           <span>Remove</span>
         </div>
       </div>
-      {cartItems.map((item) => <CheckoutItem key={item.id } cartItem={item } />)}
+      {cartItems.length ? (
+        cartItems.map((item) => <CheckoutItem key={item.id} cartItem={item} />)
+      ) : (
+        <div class="empty-message">No items on your cart!</div>
+      )}
       <div className="total">
         <span>Total: $ {total}</span>
       </div>
