@@ -32,7 +32,7 @@ export const CheckoutPage = ({ cartItems, total }) => {
       {cartItems.length ? (
         cartItems.map((item) => <CheckoutItem key={item.id} cartItem={item} />)
       ) : (
-        <div class="empty-message">No items on your cart!</div>
+        <div className="empty-message">No items on your cart!</div>
       )}
       <div className="total">
         <span>Total: $ {total}</span>
