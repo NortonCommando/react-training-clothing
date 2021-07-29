@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import CheckoutItem from "../../components/chekcout-item/checkout-item.component";
 
 import {
   selectCartItems,
@@ -28,7 +29,7 @@ export const CheckoutPage = ({ cartItems, total }) => {
           <span>Remove</span>
         </div>
       </div>
-      {cartItems.map((item) => item.name)}
+      {cartItems.map((item) => <CheckoutItem key={item.id } cartItem={item } />)}
       <div className="total">
         <span>Total: $ {total}</span>
       </div>
