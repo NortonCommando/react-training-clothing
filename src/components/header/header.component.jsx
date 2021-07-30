@@ -35,7 +35,7 @@ const Header = ({ currentUser, hidden }) => {
       </div>
       {!hidden ? <CartDropdown /> : null}
       </div >
-      <div class="cleaner"> &nbsp;</div>
+      <div className="cleaner"> &nbsp;</div>
       </>
   );
 }
