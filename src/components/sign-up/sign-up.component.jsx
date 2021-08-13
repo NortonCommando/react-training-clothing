@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 import CustomButton from "../custom-button/custom-button.component";
 import FormInput from "../form-input/form-input.component";
 import { signUpStart } from "../../redux/user/user.actions";
@@ -24,7 +23,7 @@ class SignUp extends React.Component {
     const { displayName, email, password, confirmPassword } = this.state;
 
     if (password !== confirmPassword) {
-      alert("passwords dont match");
+      alert("passwords don't match");
       return;
     }
 
