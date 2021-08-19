@@ -30,7 +30,7 @@ const StripeCheckoutButton = ({ total }) => {
       billingAddress
       shippingAddress
       allowRememberMe="Remember me"
-      image="https://sendeyo.com/up/d/f3eb2117da"
+      image="https://i.pinimg.com/originals/0c/cf/c0/0ccfc016200bc96e65c56b19b2689fb8.gif"
       description={`Your total is $${total}`}
       amount={priceForStripe}
       panelLabel="Pay now"
